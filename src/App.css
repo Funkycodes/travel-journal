@@ -1,0 +1,92 @@
+div,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+.container {
+  /*** Variable ***/
+  --clr--peach: #f55a5a;
+  --clr-grey: hsla(254, 0%, 58%, 1);
+
+  /*** General ***/
+  font-size: 10.24px;
+}
+.header {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #fff;
+  background: var(--clr--peach);
+  font-weight: 500;
+}
+.logo {
+  font-size: 24px;
+  color: #dadada;
+}
+.logo--title {
+  font-size: 0.9rem;
+}
+.main {
+  padding: 2.5rem;
+  max-width: 960px;
+  margin-inline: auto;
+}
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 2em 0;
+}
+.card--info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.card--title {
+  font-size: 25px;
+}
+.card--image {
+  border-radius: 5px;
+  width: 20em;
+  height: 100%;
+  aspect-ratio: 4/3;
+  transition: width 0.7s cubic-bezier(0.39, 0.575, 0.565, 1),
+    transform 0.4s ease-in-out;
+  object-fit: cover;
+}
+.card--image:hover {
+  transform: scale(1.05);
+}
+.icon {
+  color: var(--clr--peach);
+  margin-right: 0.3rem;
+}
+.location--url {
+  color: var(--clr-grey);
+  margin-left: 1rem;
+}
+.card--text {
+  line-height: 15.36px;
+  margin-top: 0.5rem;
+}
+.card--date {
+  font-size: 11.2px;
+  font-weight: 500;
+}
+.card:not(:last-child) {
+  border-bottom: 1px solid var(--clr-grey);
+}
+
+@media (max-width: 550px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card--image {
+    width: 100%;
+  }
+}
